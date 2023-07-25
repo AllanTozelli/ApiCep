@@ -1,6 +1,6 @@
-# Nome do meu projeto
+# Consumir API de CEP 
 
-Rápida descrição do objetivo de fazer esse projeto
+A API foi realizada, com base no desafio do curso (JAVA: CONSUMINDO API, GRAVANDO ARQUIVOS E LIDANDO COM ERROS)
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
