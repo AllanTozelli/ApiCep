@@ -2,7 +2,7 @@ package Models;
 
 import com.google.gson.annotations.SerializedName;
 
-public record CepAPI(
+public record CepApi(
 
         //Utilizamos o @SerializedName("nome na API") passando o nome para nos fazermos o DE PARA
         @SerializedName("cep") String cep,

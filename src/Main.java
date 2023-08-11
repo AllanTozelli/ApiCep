@@ -1,7 +1,6 @@
-import Models.CepAPI;
-import Models.buscadorCep;
+import Models.CepApi;
 import Utils.ConexaoHttp;
-import Utils.GeradorDeArquivo;
+import Utils.GeradorArquivo;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ public class Main {
         ConexaoHttp conexao = new ConexaoHttp();
 
         //Criando um novo ArrayList do tipo CepAPI
-        List<CepAPI> listaCep = new ArrayList<>();
+        List<CepApi> listaCep = new ArrayList<>();
 
         while (!busca.equalsIgnoreCase("sair")) {
 // Realizando o Get do cep que o usuario deseja consultar
@@ -31,10 +30,10 @@ public class Main {
 
             try{
                 // Instanciando a classe Record CepAPI como uma nova busca no site da API.
-                CepAPI novoCep = conexao.acessarSite();
+                CepApi novoCep = conexao.acessarSite();
 
                 // Instanciando a classe de geração de arquivos
-                GeradorDeArquivo gerador = new GeradorDeArquivo();
+                GeradorArquivo gerador = new GeradorArquivo();
 
                 // Adicionando o Cep consultado na arrayList declarada no coemço do codigo
                 listaCep.add(novoCep);

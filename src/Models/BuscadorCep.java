@@ -1,8 +1,6 @@
 package Models;
 
-import java.util.List;
-
-public class buscadorCep implements Comparable<buscadorCep>  {
+public class BuscadorCep implements Comparable<BuscadorCep>  {
 
 
     private String cep;
@@ -19,7 +17,7 @@ public class buscadorCep implements Comparable<buscadorCep>  {
 
 
     @Override
-    public int compareTo(buscadorCep outroCep) {
+    public int compareTo(BuscadorCep outroCep) {
         return this.getCep().compareTo(outroCep.getCep());
     }
 }

@@ -1,7 +1,6 @@
 package Utils;
 
-import Models.buscadorCep;
-import Models.CepAPI;
+import Models.CepApi;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -32,7 +31,7 @@ public class ConexaoHttp{
     }
 
     // Declarando o Metodo que realiza o acesso a API
-    public CepAPI acessarSite() {
+    public CepApi acessarSite() {
         // Instanciando um HttpCLiente para fazer a requisição (abre a conexão a partir de um HttpGet ou HttpPost)
         HttpClient client = HttpClient.newHttpClient();
 // Instanciando o Http Request para realizar a requisição(chamada) na API
@@ -45,7 +44,7 @@ public class ConexaoHttp{
                     .newHttpClient()
                     .send(request, HttpResponse.BodyHandlers.ofString());
 
-            return new Gson().fromJson(response.body(), CepAPI.class);
+            return new Gson().fromJson(response.body(), CepApi.class);
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException("Não foi possivel encontrar esse CEP");
         }
